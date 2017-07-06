@@ -1,0 +1,64 @@
+<div class="container">
+	<form novalidate ng-init="form.createUserForm.submitted=false" name="form.createUserForm" ng-submit="form.createUserForm.$valid && form.createUserForm.submitted && createUser()">
+		<div class="form-group row">
+			<label for="UserName" class="col-sm-2 col-form-label">UserName:</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="UserName"
+					placeholder="UserName" ng-model="milkConsumer.userName">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="milkQuantity" class="col-sm-2 col-form-label">Quantity:</label>
+			<div class="col-sm-10">
+				<input type="number" class="form-control" id="milkQuantity"
+					placeholder="Milk Quantity" ng-model="milkConsumer.milkQuantity" >
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="milkQuantity" class="col-sm-2 col-form-label">User
+				Address:</label>
+			<div class="col-sm-10">
+				<textarea class="form-control" id="userAddress"
+					placeholder="User Address" ng-model="milkConsumer.userAddress"></textarea>
+			</div>
+		</div>
+		<!-- 		<div class="form-group row"> -->
+		<!-- 			<label for="milkQuantity" class="col-sm-2 col-form-label">User -->
+		<!-- 				Address:</label> -->
+		<!-- 			<div class="col-sm-10"> -->
+		<!-- 				<textarea class="form-control" id="userAddress" -->
+		<!-- 					placeholder="User Address"></textarea> -->
+		<!-- 			</div> -->
+		<!-- 		</div> -->
+		<div class="form-group row">
+			<label for="milkQuantity" class="col-sm-2 col-form-label">Is
+				Today's Present:</label>
+			<div class="col-sm-10">
+				<input type="checkbox" name="todaysPresent" value="1"
+					ng-model="milkConsumer.todayPresent">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="joiningDate" class="col-sm-2 col-form-label">Joining
+				Date:</label>
+			<div class="col-sm-10">
+				<input type="date" class="form-control" placeholder="Joining Date"
+					ng-model="milkConsumer.joiningDate">
+			</div>
+		</div>
+		<!-- 		<div class="form-group row"> -->
+		<!-- 			<label for="milkQuantity" class="col-sm-2 col-form-label">User -->
+		<!-- 				Address:</label> -->
+		<!-- 			<div class="col-sm-10"> -->
+		<!-- 				<textarea class="form-control" id="userAddress" -->
+		<!-- 					placeholder="User Address"></textarea> -->
+		<!-- 			</div> -->
+		<!-- 		</div> -->
+		<div class="form-group row">
+			<div class="offset-sm-2 col-sm-10">
+				<button type="button" class="btn btn-primary" ng-click="form.createUserForm.submitted=true;">Create User</button>
+				<button type="button" class="btn btn-warning" ng-click="resetMilkConsumer()">Reset</button>
+			</div>
+		</div>
+	</form>
+</div>
