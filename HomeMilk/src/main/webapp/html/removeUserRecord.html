@@ -12,14 +12,9 @@
 					<tr>
 						<td class="col-lg-1">UserName</td>
 						<td class="col-lg-6"><select class="selectpicker"
-							data-style="btn-warning" class="form-control" ng-model="milkConsumer">
-								<option>TempUserName</option>
-								<option>TempUserName</option>
-								<option>TempUserName</option>
-								<option>TempUserName</option>
-								<option>TempUserName</option>
-								<option>TempUserName</option>
-
+							data-style="btn-warning" class="form-control"
+							ng-model="milkConsumer">
+								<option ng-repeat="user in milkConsumers" value="{{user}}">{{user.name}}</option>
 						</select></td>
 
 					</tr>

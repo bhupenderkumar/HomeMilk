@@ -12,6 +12,7 @@ app.controller("createUserController", [
 		        resetMilkConsumer();
 		        $scope.createUser = createUser;
 		        initializeMilkConsumer()
+		        $scope.milkConsumers = getMilkConsumers()
 		        $scope.form = {};
 	        }
 	        function initializeMilkConsumer() {

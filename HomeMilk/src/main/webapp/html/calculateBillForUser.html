@@ -11,14 +11,7 @@
 						<td class="col-lg-6"><select class="selectpicker"
 							data-style="btn-warning" class="form-control"
 							ng-model="milkConsumer">
-								<option style="display: none" value="? undefined:undefined ?"></option>
-								<option selected="selected">TempUserName</option>
-								<option>TempUserName</option>
-								<option>TempUserName</option>
-								<option>TempUserName</option>
-								<option>TempUserName</option>
-								<option>TempUserName</option>
-
+								<option ng-repeat="user in milkConsumers" value="{{user}}">{{user.name}}</option>
 						</select></td>
 
 					</tr>
