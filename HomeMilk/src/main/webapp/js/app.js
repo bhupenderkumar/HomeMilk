@@ -8,7 +8,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 	    templateUrl : 'html/createUser.html',
 	    controller : 'createUserController'
 	})
-  
+
 	.state('createMilkAttendance', {
 	    name : 'createMilkAttendance',
 	    url : '/createMilkAttendance',
@@ -21,8 +21,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 	    url : '/removeUserRecord',
 	    templateUrl : 'html/removeUserRecord.html',
 	    controller : 'removeUserRecordController'
-	})
-	.state('calculateMonthlyBill', {
+	}).state('calculateMonthlyBill', {
 	    name : 'calculateMonthlyBill',
 	    url : '/calculateMonthlyBill',
 	    templateUrl : 'html/calculateMonthlyBill.html',
@@ -34,6 +33,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 	    url : '/calculateBillForUser',
 	    templateUrl : 'html/calculateBillForUser.html',
 	    controller : 'calculateBillForUserController'
+	}).state('updateUserRecord', {
+	    name : 'updateUserRecord',
+	    url : '/updateUserRecord',
+	    templateUrl : 'html/updateUserRecord.html',
+	    controller : 'updateUserDataController'
 	});
 })
 

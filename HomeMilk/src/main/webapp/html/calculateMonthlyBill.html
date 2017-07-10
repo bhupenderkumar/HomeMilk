@@ -1,1 +1,43 @@
-calculateMonthlyBill For User for the month of Temp
+<div class="container">
+	<div class="">
+		Calculate Monthly Bill For User
+		<div class="">
+			<form novalidate name="form.removeUserForm"
+				ng-init="form.removeUserForm.submitted=false"
+				ng-submit="form.removeUserForm.submitted && form.removeUserForm.$valid && calculateMonthlyBill()">
+				<table class="table-stripped col-lg-12">
+					<tr>
+						<td class="col-lg-1">UserName</td>
+						<td class="col-lg-6"><select class="selectpicker"
+							data-style="btn-warning" class="form-control"
+							ng-model="milkConsumer">
+								<option style="display: none" value="? undefined:undefined ?"></option>
+								<option selected="selected">TempUserName</option>
+								<option>TempUserName</option>
+								<option>TempUserName</option>
+								<option>TempUserName</option>
+								<option>TempUserName</option>
+								<option>TempUserName</option>
+
+						</select></td>
+
+					</tr>
+
+				</table>
+				<div class="col-lg-12">
+					<div class="col-lg-6"></div>
+					<div class="col-lg-6">
+						<button type="submit"
+							ng-click="form.removeUserForm.submitted=true"
+							class="btn btn-primary">Calculate</button>
+						<button class="btn btn-danger">Cancel</button>
+					</div>
+				</div>
+			</form>
+
+		</div>
+
+	</div>
+
+
+</div>
