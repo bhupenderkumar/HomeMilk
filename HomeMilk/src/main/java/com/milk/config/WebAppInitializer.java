@@ -13,7 +13,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		ctx.register(AppConfig.class);
 		ctx.setServletContext(servletContext);
 		Dynamic dynamic = servletContext.addServlet("dispatcher", new DispatcherServlet(ctx));
-		dynamic.addMapping("/");
+//		dynamic.addMapping("/");
 //		dynamic.addMapping("/js");
 //		dynamic.addMapping("/css");
 //		dynamic.addMapping("/html");
