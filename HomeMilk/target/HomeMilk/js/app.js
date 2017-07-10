@@ -8,7 +8,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 	    templateUrl : 'html/createUser.html',
 	    controller : 'createUserController'
 	})
-
+  
 	.state('createMilkAttendance', {
 	    name : 'createMilkAttendance',
 	    url : '/createMilkAttendance',

@@ -4,7 +4,6 @@
 /* 	font-size: 12px; */
 /* 	line-height: 1.25; */
 /* } */
-
 header {
 	text-align: center;
 	padding: 2em;
@@ -37,6 +36,7 @@ nav ul {
 
 nav ul li {
 	display: inline-block;
+	margin: 10px;
 }
 
 nav ul li a {
