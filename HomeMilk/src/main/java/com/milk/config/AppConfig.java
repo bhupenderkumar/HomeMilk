@@ -5,6 +5,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration 
 @ComponentScan("com.milk.RestController") 
 @EnableWebMvc   
-public class AppConfig {  
+public class AppConfig  {  
 } 
 
