@@ -22,6 +22,16 @@ public class MilkConsumer {
 	private Date joiningDate;
 	private Date leavingDate;
 	private String leavingReason;
+	private float milkQuantity;
+	
+
+	public float getMilkQuantity() {
+		return milkQuantity;
+	}
+
+	public void setMilkQuantity(float milkQuantity) {
+		this.milkQuantity = milkQuantity;
+	}
 
 	public float getQuantity() {
 		return quantity;

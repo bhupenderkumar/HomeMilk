@@ -1,12 +1,13 @@
-x<html lang="en">
+
+<html lang="en">
 <head>
 <title>MilkMan Example</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400'
-	rel='stylesheet' type='text/css'>
+<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' -->
+<!-- 	rel='stylesheet' type='text/css'> -->
 <link rel='stylesheet' type='text/css' href="css/bootstrap.min.css">
 <link rel='stylesheet' type='text/css' href="css/styles.css">
 <link rel='stylesheet' type='text/css' href="css/openSans.css">
@@ -48,7 +49,7 @@ x<html lang="en">
 						Calculate Bill for Particular User</a></li>
 			</ul>
 		</nav>
-		<div class="content">
+		<div class="">
 			<div ui-view ng-class="transition">default content</div>
 		</div>
 	</div>
@@ -67,6 +68,8 @@ x<html lang="en">
 	<script src="js/controller/milkAttendanceController.js"></script>
 	<script src="js/controller/removeUserRecordController.js"></script>
 	<script src="js/controller/updateUserDataController.js"></script>
+	<script src="js/service/milkAttendanceService.js"></script>
+	<script src="js/service/createUserService.js"></script>
 	<script src="js/milkman.common.js"></script>
 </body>
 </html>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://RestController.milk.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://RestController.milk.com" xmlns:intf="http://RestController.milk.com" xmlns:tns1="http://consumer.milk.com" xmlns:tns2="http://http.springframework.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://RestController.milk.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://consumer.milk.com"/>
+   <import namespace="http://http.springframework.org"/>
+   <element name="getAllMilkConsumer">
+    <complexType/>
+   </element>
+   <element name="getAllMilkConsumerResponse">
+    <complexType>
+     <sequence>
+      <element name="getAllMilkConsumerReturn" type="impl:ArrayOf_xsd_anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_anyType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+   <element name="createMilkConsumer">
+    <complexType>
+     <sequence>
+      <element name="milkConsumer" type="tns1:MilkConsumer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createMilkConsumerResponse">
+    <complexType>
+     <sequence>
+      <element name="createMilkConsumerReturn" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateMilkConsumer">
+    <complexType>
+     <sequence>
+      <element name="consumer" type="tns1:MilkConsumer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateMilkConsumerResponse">
+    <complexType>
+     <sequence>
+      <element name="updateMilkConsumerReturn" type="tns2:ResponseEntity"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteMilkConsumer">
+    <complexType>
+     <sequence>
+      <element name="milkConsumer" type="tns1:MilkConsumer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteMilkConsumerResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteMilkConsumerReturn" type="tns2:ResponseEntity"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createAttendance">
+    <complexType>
+     <sequence>
+      <element name="milkConsumer" type="tns1:MilkConsumer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createAttendanceResponse">
+    <complexType>
+     <sequence>
+      <element name="createAttendanceReturn" type="tns2:ResponseEntity"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://consumer.milk.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://RestController.milk.com"/>
+   <import namespace="http://http.springframework.org"/>
+   <complexType name="MilkConsumer">
+    <sequence>
+     <element name="address" nillable="true" type="xsd:string"/>
+     <element name="adjustedDate" nillable="true" type="xsd:date"/>
+     <element name="joiningDate" nillable="true" type="xsd:date"/>
+     <element name="leavingDate" nillable="true" type="xsd:date"/>
+     <element name="leavingReason" nillable="true" type="xsd:string"/>
+     <element name="milkConsumerId" type="xsd:long"/>
+     <element name="milkQuantity" type="xsd:float"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="quantity" type="xsd:float"/>
+     <element name="todayPresent" type="xsd:int"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getAllMilkConsumerRequest">
+
+      <wsdl:part element="impl:getAllMilkConsumer" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAllMilkConsumerResponse">
+
+      <wsdl:part element="impl:getAllMilkConsumerResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteMilkConsumerResponse">
+
+      <wsdl:part element="impl:deleteMilkConsumerResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateMilkConsumerResponse">
+
+      <wsdl:part element="impl:updateMilkConsumerResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createAttendanceResponse">
+
+      <wsdl:part element="impl:createAttendanceResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteMilkConsumerRequest">
+
+      <wsdl:part element="impl:deleteMilkConsumer" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createMilkConsumerResponse">
+
+      <wsdl:part element="impl:createMilkConsumerResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateMilkConsumerRequest">
+
+      <wsdl:part element="impl:updateMilkConsumer" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createAttendanceRequest">
+
+      <wsdl:part element="impl:createAttendance" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createMilkConsumerRequest">
+
+      <wsdl:part element="impl:createMilkConsumer" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="MilkController">
+
+      <wsdl:operation name="getAllMilkConsumer">
+
+         <wsdl:input message="impl:getAllMilkConsumerRequest" name="getAllMilkConsumerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAllMilkConsumerResponse" name="getAllMilkConsumerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createMilkConsumer">
+
+         <wsdl:input message="impl:createMilkConsumerRequest" name="createMilkConsumerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createMilkConsumerResponse" name="createMilkConsumerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateMilkConsumer">
+
+         <wsdl:input message="impl:updateMilkConsumerRequest" name="updateMilkConsumerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateMilkConsumerResponse" name="updateMilkConsumerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteMilkConsumer">
+
+         <wsdl:input message="impl:deleteMilkConsumerRequest" name="deleteMilkConsumerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteMilkConsumerResponse" name="deleteMilkConsumerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createAttendance">
+
+         <wsdl:input message="impl:createAttendanceRequest" name="createAttendanceRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createAttendanceResponse" name="createAttendanceResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="MilkControllerSoapBinding" type="impl:MilkController">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getAllMilkConsumer">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAllMilkConsumerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAllMilkConsumerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createMilkConsumer">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createMilkConsumerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createMilkConsumerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateMilkConsumer">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateMilkConsumerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateMilkConsumerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteMilkConsumer">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteMilkConsumerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteMilkConsumerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createAttendance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createAttendanceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createAttendanceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="MilkControllerService">
+
+      <wsdl:port binding="impl:MilkControllerSoapBinding" name="MilkController">
+
+         <wsdlsoap:address location="http://localhost:7070/HomeMilk/services/MilkController"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
