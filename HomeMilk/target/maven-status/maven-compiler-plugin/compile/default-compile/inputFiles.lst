@@ -1,7 +1,10 @@
 C:\Users\bhukumar\git\HomeMilk\HomeMilk\src\main\java\com\milk\RestController\MilkController.java
+C:\Users\bhukumar\git\HomeMilk\HomeMilk\src\main\java\com\milk\connections\Test.java
 C:\Users\bhukumar\git\HomeMilk\HomeMilk\src\main\java\com\milk\config\AppConfig.java
 C:\Users\bhukumar\git\HomeMilk\HomeMilk\src\main\java\com\milk\producer\MilkProducer.java
+C:\Users\bhukumar\git\HomeMilk\HomeMilk\src\main\java\com\milk\connections\Connections.java
 C:\Users\bhukumar\git\HomeMilk\HomeMilk\src\main\java\com\milk\consumer\MilkConsumer.java
 C:\Users\bhukumar\git\HomeMilk\HomeMilk\src\main\java\com\milk\daoImpl\MilkDaoImpl.java
 C:\Users\bhukumar\git\HomeMilk\HomeMilk\src\main\java\com\milk\config\WebAppInitializer.java
 C:\Users\bhukumar\git\HomeMilk\HomeMilk\src\main\java\com\milk\dao\IMilkDao.java
+C:\Users\bhukumar\git\HomeMilk\HomeMilk\src\main\java\com\milk\connections\HibernateUtil.java

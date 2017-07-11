@@ -2,8 +2,17 @@ package com.milk.consumer;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "milkconsumer")
 public class MilkConsumer {
 
+	@Id
+	@Column(name = "milkconsumerId", unique = true, nullable = false)
 	private long milkConsumerId;
 
 	public long getMilkConsumerId() {
@@ -23,8 +32,11 @@ public class MilkConsumer {
 	private Date leavingDate;
 	private String leavingReason;
 	private float milkQuantity;
-	
 
+	// create table milkconsumer (id int primary key, name varchar2(100),address
+	// varchar2(200),ajustedDate date,
+	// ,joiningDate date,leavingDate date,leavingReason varchar2(200),
+	// milkQuantity float)
 	public float getMilkQuantity() {
 		return milkQuantity;
 	}
