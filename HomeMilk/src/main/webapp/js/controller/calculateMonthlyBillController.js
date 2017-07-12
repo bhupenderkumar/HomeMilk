@@ -2,12 +2,12 @@
  * 
  */
 
-app.controller("calculateMonthlyBillController",["$scope", function ($scope) {
+app.controller("calculateMonthlyBillController",["$scope", "milkCommonService",function ($scope,milkCommonService) {
 	
 	init();
 	function init(){
 	   $scope.calculateMonthlyBill = calculateMonthlyBill ;	
-	   $scope.milkConsumers = getMilkConsumers()
+	   $scope.milkConsumers = milkCommonService.getMilkConsumers()
 	}
 	
 	

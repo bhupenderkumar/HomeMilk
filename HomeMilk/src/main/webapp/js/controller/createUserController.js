@@ -5,14 +5,15 @@ app.controller("createUserController", [
         "$scope",
         "createUserService",
         "$filter",
-        function ($scope, createUserService, $filter) {
+        "milkCommonService",
+        function ($scope, createUserService, $filter,milkCommonService) {
 	        init();
 	        function init() {
 		        $scope.resetMilkConsumer = resetMilkConsumer;
 		        resetMilkConsumer();
 		        $scope.createUser = createUser;
 		        initializeMilkConsumer()
-		        $scope.milkConsumers = getMilkConsumers()
+		        $scope.milkConsumers = milkCommonService.getMilkConsumers()
 		        $scope.form = {};
 	        }
 	        function initializeMilkConsumer() {

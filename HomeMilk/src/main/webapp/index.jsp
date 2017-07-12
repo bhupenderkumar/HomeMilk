@@ -71,6 +71,7 @@
 	<script src="js/service/milkAttendanceService.js"></script>
 	<script src="js/service/createUserService.js"></script>
 	<script src="js/service/removeUserRecordService.js"></script>
+	<script src="js/service/common-service.js"></script>
 	<script src="js/milkman.common.js"></script>
 </body>
 </html>

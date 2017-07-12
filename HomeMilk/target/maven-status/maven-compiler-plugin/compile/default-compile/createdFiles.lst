@@ -1,0 +1,10 @@
+com\milk\producer\MilkProducer.class
+com\milk\daoImpl\MilkDaoImpl.class
+com\milk\dao\IMilkDao.class
+com\milk\config\WebAppInitializer.class
+com\milk\RestController\MilkController.class
+com\milk\connections\Connections.class
+com\milk\connections\Test.class
+com\milk\connections\HibernateUtil.class
+com\milk\consumer\MilkConsumer.class
+com\milk\config\AppConfig.class

@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,9 +22,9 @@ public class MilkController {
 	private MilkDaoImpl milkDaoImpl = new MilkDaoImpl();
 
 	@RequestMapping(value = "/getAllMilkConsumer", method = RequestMethod.GET)
-	public List<MilkConsumer> getAllMilkConsumer() {
+	public @ResponseBody ResponseEntity<List<MilkConsumer>> getAllMilkConsumer() {
 		List<MilkConsumer> milkConsumer = milkDaoImpl.getAllMilkConsumer();
-		return milkConsumer;
+		return new ResponseEntity<List<MilkConsumer>>(milkConsumer, HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/createMilkConsumer", method = RequestMethod.POST)
@@ -41,8 +43,10 @@ public class MilkController {
 	}
 
 	@RequestMapping(value = "/createMilkAttendance", method = RequestMethod.POST)
-	public @ResponseBody ResponseEntity<Boolean> createAttendance(List<MilkConsumer> milkConsumers) {
-		return new ResponseEntity<Boolean>(milkDaoImpl.createAttendance(milkConsumers), HttpStatus.OK);
+	public @ResponseBody ResponseEntity<Boolean> createAttendance(@ModelAttribute MilkConsumer milkConsumers) {
+		System.out.println(milkConsumers);
+		
+		return new ResponseEntity<Boolean>(milkDaoImpl.createAttendance(null), HttpStatus.OK);
 	}
 
 }

@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-   
+
 <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' -->
 <!-- 	rel='stylesheet' type='text/css'> -->
 <link rel='stylesheet' type='text/css' href="css/bootstrap.min.css">
@@ -70,6 +70,8 @@
 	<script src="js/controller/updateUserDataController.js"></script>
 	<script src="js/service/milkAttendanceService.js"></script>
 	<script src="js/service/createUserService.js"></script>
+	<script src="js/service/removeUserRecordService.js"></script>
+	<script src="js/service/common-service.js"></script>
 	<script src="js/milkman.common.js"></script>
 </body>
 </html>

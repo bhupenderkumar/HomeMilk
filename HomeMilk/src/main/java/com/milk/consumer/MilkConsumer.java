@@ -1,5 +1,6 @@
 package com.milk.consumer;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -9,8 +10,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "milkconsumer")
-public class MilkConsumer {
+public class MilkConsumer implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "milkconsumerId", unique = true, nullable = false)
 	private long milkConsumerId;

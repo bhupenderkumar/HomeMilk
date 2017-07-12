@@ -21,3 +21,14 @@ function getDate() {
 	var day = date.getUTCDate();
 	var dateString = year + "-" + month + "-" + day;
 }
+
+function getMilkConsumers(){
+	var arr=[];
+	for(count =0;count <10;count++) {
+		var json ={};
+		json.name = "Test__"+count;
+		json.milkQuantity = Math.floor(((count * Math.random()) +1))
+		arr.push(json);
+	}
+	return arr;
+}

@@ -14,10 +14,11 @@
 					</tr>
 				</thead>
 				<tbody>
+
 					<tr ng-repeat="user in milkConsumers" ng-form="attendanceForm">
 						<td>{{$index+1}}</td>
-						<td>{{user.name}}</td>
-						<td>{{user.milkQuantity}}</td>
+						<td>{{user.NAME}}</td>
+						<td>{{user.MILKQUANTITY}}</td>
 						<td><input type="number" required name="quantity"
 							class="form-control" ng-model="user.quantity"> <span
 							class="form-group has-error has-feedback"
