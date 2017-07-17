@@ -1,6 +1,9 @@
 package com.milk.RestController;
 
+import java.util.Enumeration;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,9 +46,17 @@ public class MilkController {
 	}
 
 	@RequestMapping(value = "/createMilkAttendance", method = RequestMethod.POST)
-	public @ResponseBody ResponseEntity<Boolean> createAttendance(@ModelAttribute MilkConsumer milkConsumers) {
-		System.out.println(milkConsumers);
-		
+	public @ResponseBody ResponseEntity<Boolean> createAttendance(HttpServletRequest httpServletRequest,
+			) {
+		Enumeration<String> temp = httpServletRequest.getParameterNames();
+		while (temp.hasMoreElements()) {
+			System.out.println(temp.nextElement());
+			Gson gson = new Gson();		
+//			clients = gson.fromJson(clientList, new TypeToken<ArrayList<Client>>() {
+//
+//			}.getType());
+		}
+
 		return new ResponseEntity<Boolean>(milkDaoImpl.createAttendance(null), HttpStatus.OK);
 	}
 
